@@ -556,6 +556,16 @@ header.scrolled{box-shadow:0 6px 24px rgba(11,37,69,.08);border-bottom-color:var
 @keyframes pulse{0%{transform:scale(.6);opacity:1;}100%{transform:scale(1.8);opacity:0;}}
 .hours-status span{font-size:12.5px;font-weight:700;color:var(--ink-soft);}
 /* ---------- Doctors ---------- */
+.dr-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
+.dr-card{flex:0 0 calc((100% - 60px)/4);}
+.dr-card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:26px 16px 22px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;transition:transform .4s var(--ease),box-shadow .4s var(--ease);}
+.dr-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.dr-avatar{width:68px;height:68px;border-radius:50%;background:var(--navy-800);color:var(--gold-400);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin-bottom:8px;}
+.dr-card h3{font-size:17px;margin:0;}
+.dr-qual{font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--navy-700);background:var(--navy-tint);padding:3px 12px;border-radius:100px;}
+.dr-spec{font-size:13px;color:var(--ink-soft);line-height:1.4;}
+@media(max-width:900px){.dr-card{flex-basis:calc((100% - 40px)/3);}}
+@media(max-width:640px){.dr-grid{gap:12px;}.dr-card{flex-basis:calc((100% - 12px)/2);}.dr-card{padding:20px 10px 18px;}.dr-avatar{width:56px;height:56px;font-size:23px;}.dr-card h3{font-size:15px;}}
 .doctor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
 .doctor-card{
   background:var(--white);border:1px solid var(--line);border-radius:24px;padding:32px 30px;text-align:center;
@@ -1055,80 +1065,78 @@ footer h4{color:var(--white);font-size:15px;margin-bottom:20px;font-family:'Inte
     <div class="section-head reveal">
       <span class="eyebrow">Meet The Team</span>
       <h2>Meet the Team Behind Your Smile</h2>
-      <p>General dentists and MDS specialists under one roof — so most of your dental needs can be handled right here at the clinic.</p>
+      <p>General dentists and MDS specialists under one roof.</p>
     </div>
-    <h3 class="doctor-group-title reveal">General Dentistry</h3>
-    <div class="doctor-grid doctor-group">
-      <div class="doctor-card reveal">
-        <div class="doctor-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+    <div class="dr-grid">
+      <div class="dr-card reveal">
+        <div class="dr-avatar" aria-hidden="true">S</div>
         <h3>Dr. Savitha</h3>
-        <span class="doctor-role">BDS</span>
+        <span class="dr-qual">BDS</span>
+        <span class="dr-spec">General Dentistry</span>
       </div>
-      <div class="doctor-card reveal reveal-delay-1">
-        <div class="doctor-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+      <div class="dr-card reveal">
+        <div class="dr-avatar" aria-hidden="true">J</div>
         <h3>Dr. Jyothi</h3>
-        <span class="doctor-role">BDS</span>
+        <span class="dr-qual">BDS</span>
+        <span class="dr-spec">General Dentistry</span>
       </div>
-      <div class="doctor-card reveal reveal-delay-2">
-        <div class="doctor-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+      <div class="dr-card reveal">
+        <div class="dr-avatar" aria-hidden="true">N</div>
         <h3>Dr. Nayana</h3>
-        <span class="doctor-role">BDS</span>
+        <span class="dr-qual">BDS</span>
+        <span class="dr-spec">General Dentistry</span>
       </div>
-      <div class="doctor-card reveal">
-        <div class="doctor-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+      <div class="dr-card reveal">
+        <div class="dr-avatar" aria-hidden="true">R</div>
         <h3>Dr. Rohith</h3>
-        <span class="doctor-role">BDS</span>
+        <span class="dr-qual">BDS</span>
+        <span class="dr-spec">General Dentistry</span>
       </div>
-    </div>
-    <h3 class="doctor-group-title reveal">Orthodontics</h3>
-    <div class="doctor-grid doctor-group">
-      <div class="doctor-card reveal">
-        <div class="doctor-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+      <div class="dr-card reveal">
+        <div class="dr-avatar" aria-hidden="true">K</div>
         <h3>Dr. Kruthika</h3>
-        <span class="doctor-role">MDS – Orthodontics</span>
+        <span class="dr-qual">MDS</span>
+        <span class="dr-spec">Orthodontist</span>
       </div>
-      <div class="doctor-card reveal reveal-delay-1">
-        <div class="doctor-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+      <div class="dr-card reveal">
+        <div class="dr-avatar" aria-hidden="true">P</div>
         <h3>Dr. Prerana</h3>
-        <span class="doctor-role">MDS – Orthodontics</span>
+        <span class="dr-qual">MDS</span>
+        <span class="dr-spec">Orthodontist</span>
       </div>
-      <div class="doctor-card reveal reveal-delay-2">
-        <div class="doctor-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+      <div class="dr-card reveal">
+        <div class="dr-avatar" aria-hidden="true">R</div>
         <h3>Dr. Roopa</h3>
-        <span class="doctor-role">MDS – Orthodontics</span>
+        <span class="dr-qual">MDS</span>
+        <span class="dr-spec">Orthodontist</span>
       </div>
-    </div>
-    <h3 class="doctor-group-title reveal">Periodontics</h3>
-    <div class="doctor-grid doctor-group">
-      <div class="doctor-card reveal">
-        <div class="doctor-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+      <div class="dr-card reveal">
+        <div class="dr-avatar" aria-hidden="true">R</div>
         <h3>Dr. Rashmi</h3>
-        <span class="doctor-role">MDS – Periodontics</span>
+        <span class="dr-qual">MDS</span>
+        <span class="dr-spec">Periodontist</span>
       </div>
-    </div>
-    <h3 class="doctor-group-title reveal">Periodontics & Implantology</h3>
-    <div class="doctor-grid doctor-group">
-      <div class="doctor-card reveal">
-        <div class="doctor-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+      <div class="dr-card reveal">
+        <div class="dr-avatar" aria-hidden="true">R</div>
         <h3>Dr. Ranganath</h3>
-        <span class="doctor-role">MDS – Periodontics &amp; Implantology</span>
+        <span class="dr-qual">MDS</span>
+        <span class="dr-spec">Periodontist &amp; Implantologist</span>
       </div>
-    </div>
-    <h3 class="doctor-group-title reveal">Oral &amp; Maxillofacial Surgery</h3>
-    <div class="doctor-grid doctor-group">
-      <div class="doctor-card reveal">
-        <div class="doctor-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+      <div class="dr-card reveal">
+        <div class="dr-avatar" aria-hidden="true">A</div>
         <h3>Dr. Akash</h3>
-        <span class="doctor-role">MDS – Oral &amp; Maxillofacial Surgery</span>
+        <span class="dr-qual">MDS</span>
+        <span class="dr-spec">Oral &amp; Maxillofacial Surgeon</span>
       </div>
-      <div class="doctor-card reveal reveal-delay-1">
-        <div class="doctor-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+      <div class="dr-card reveal">
+        <div class="dr-avatar" aria-hidden="true">T</div>
         <h3>Dr. Thomash</h3>
-        <span class="doctor-role">MDS – Oral &amp; Maxillofacial Surgery</span>
+        <span class="dr-qual">MDS</span>
+        <span class="dr-spec">Oral &amp; Maxillofacial Surgeon</span>
       </div>
     </div>
-    <p style="text-align:center;max-width:600px;margin:36px auto 0;font-size:13.5px;color:var(--ink-soft);">
-      Have a question for a specific doctor, or want to request an appointment with someone by name?
+    <p style="text-align:center;max-width:600px;margin:32px auto 0;font-size:13.5px;color:var(--ink-soft);">
+      Want to book with a specific doctor?
       <a data-wa-link data-wa-message="Hi, I'd like to book an appointment with a specific doctor at Sri Sai Dental Clinic." href="https://wa.me/918296484417?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment%20with%20a%20specific%20doctor%20at%20Sri%20Sai%20Dental%20Clinic." target="_blank" rel="noopener noreferrer" style="color:var(--gold-600);font-weight:700;">Ask us on WhatsApp</a>.
     </p>
   </div>
